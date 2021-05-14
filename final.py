@@ -39,7 +39,7 @@ logger.main()
 
 
 email_user = 'pythonproject.py@gmail.com'
-email_password = 'Password56789'
+email_password = ''
 
 
 email_send = 'pythonproject.py@gmail.com'
